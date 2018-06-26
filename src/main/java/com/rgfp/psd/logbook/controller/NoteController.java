@@ -59,6 +59,8 @@ public class NoteController {
     @RequestMapping(value={"/noteClone","/noteClone/{id}"}, method = RequestMethod.GET)
     public String noteClone(Model model, @PathVariable(name = "id") Long id) {
         // not implemented
+
+        //
         model.addAttribute("noteList", noteService.findAll());
         return "noteList";
 

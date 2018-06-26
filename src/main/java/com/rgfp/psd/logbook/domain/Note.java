@@ -54,6 +54,21 @@ public class Note {
 
     public String getSummary() {
         // not implemented
-        return "";
+        String texto = this.content;
+        try {
+            if (texto.length() >= 15)
+                return texto.substring(0, 15);
+            else
+                return texto;
+        }
+        catch (Exception e){
+            System.out.println("Error getSummary()");
+            return"";
+        }
+    }
+
+    public void clonarTarea(long id) {
+
+        this.content = content;
     }
 }
